@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+   .body{
+     background-image:url('https://cdn.wallpapersafari.com/93/71/HIUWTR.jpg');
+    /*background-image:url('https://img.peapix.com/b4decdc0883640d08d20c99b3c973cb4_UHD.jpg?attachment&modal');*/
+   
+     background-size:cover;
+     background-repeat:no-repeat;
+     align-self:center;
+     margin-top :50px;    
+   }
+   h1{
+     text-align: center;
+     color: rgb(255, 255, 255);
+   
+   }
+   div{
+    width: 300px;
+    border-width:5px;
+    padding-left:50px;
+    padding-right:50px;
+ 
+    border-style:solid;
+    border-color:beige;
+
+
+   }
+   form{
+    color: hsl(0, 0%, 100%);
+    font-weight:bolder;
+    font-size:large;
+   }
+
+
+
+
+
+
+ 
+ </style>
+
+
+
+
+ <script>
+   function password(){
+    pass1=document.getElementById("pass1").value;
+    pass2=document.getElementById("pass2").value;
+     if(pass1==pass2){
+       return true;
+     }
+     if(pass1!=pass2){
+       document.write("Password incorrect, try again!");
+       return false;
+     }
+   }
+ </script>
+</head>
+<body class="body">
+    <center>
+    <div>
+     <h1>LOGIN </h1>
+      <form name="myform" onsubmit="return password()" action="main.html" >
+     <label for="firstname">FIRST NAME:</label>
+     <input type="text" id="fname" placeholder="enter name" required>
+     <br>
+     <br>
+     <label for="lastname">LAST NAME:</label>
+     <input type="text" id="lname" placeholder="enter surname" required><br>
+     <br>
+     <label for="gender">FEMALE</label>
+     <input type="radio" name="gender" value="idk">
+     <label for="gender">MALE</label>
+     <input type="radio" name="gender" value="idk">
+     <br><br>
+     <label for="password">ENTER PASSWORD</label>
+     <input type="password" id="pass1" onclick="pass1()" required>
+     <br><br>
+     <label for="password">CONFIRM PASSWORD</label>
+     <input type="password" id="pass2" onclick="pass1()" required>
+   <br><br>
+     <input type="submit">
+   </form>
+  </div>
+  </center>
+
+
+ 
+
+
+
+
+ 
+</body>
+</html>
+
+
+
+
+

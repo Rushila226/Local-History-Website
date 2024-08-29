@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  p.header{
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: peachpuff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-indent: 450px;
+    font-family: cursive;
+    font-size: 45px;
+    border-width: 20px;
+    border-width: 300px;
+    border-radius: 2px;
+    top: 0;
+    left: 0%;
+    position: fixed;
+    z-index: 1000;
+    display: inline-block;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    inline-size: 100%;
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+
+  p.firstRow{
+ 
+    margin-top: 100px;
+    margin-bottom: 200px;
+    display: inline-block;
+ 
+  }
+  p.secondRow{
+    margin-top: 30px;
+    margin-bottom: 200px;
+  }
+  body{
+    background-color: whitesmoke;
+  }
+  p{
+    display: inline-block;
+    margin: 10px;
+
+  }
+
+
+
+  #map{
+    margin-top: 80px;
+ 
+  }
+
+button{
+  font-size: larger;
+  box-shadow: 50px;
+  border: solid;
+}
+
+
+.contact{
+  text-align: center;
+  font-size: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  
+}
+
+</style>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+
+   <div id="map" style="height: 400px; border: solid; border-width: 5px;"></div>
+  <script>
+   
+      var map = L.map('map').setView([12.9410, 77.5655], 14);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+      }).addTo(map);
+
+
+
+      var markers = [
+          { lat:15.334880, lng: 76.462044, title: 'HAMPI' },
+          { lat: 12.410640, lng: 76.732590, title: 'SRIRANGAPATNA' },
+          { lat: 13.331760, lng: 75.769330, title: 'GOL GUMBAZ' },
+          { lat: 12.295810, lng: 76.639381, title: 'MYSORE' },
+          { lat: 12.858130, lng: 76.487000, title: 'SHRAVANABELAGOLA' },
+
+          { lat: 15.949587, lng:75.815138, title: 'PATTADKAL' },
+          { lat: 16.019911, lng: 75.88289, title: 'AIHOLE' },
+          { lat: 13.21309, lng: 75.993329, title: 'HALEBEEDU' },
+          { lat: 16.829801, lng: 75.717537, title: 'VIJAYAPURA' },
+          { lat: 17.908538, lng: 77.494547, title: 'BIDAR' },
+          { lat: 17.339005, lng: 76.83994, title: 'KALBURGI' },
+          { lat: 15.352696, lng: 76.491896, title: 'ANEGUNDI' },
+          { lat: 16.828835, lng: 76.907623, title: 'SANNATI' },
+
+
+
+
+          // Add more marker objects as needed
+      ];
+
+
+      markers.forEach(function(markerInfo) {
+          L.marker([markerInfo.lat, markerInfo.lng]).addTo(map)
+              .bindPopup(markerInfo.title)
+              .openPopup();
+      });
+  </script>
+
+
+</div>
+
+<div class="idk">
+
+  <p class="header">Local history website &#127984;</p>
+ <div class="lol">
+  <p class="firstRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7695.596326342842!2d76.45817411141739!3d15.333200137705404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb77fd95d4be823%3A0x6e52e05076df36b8!2sHampi%2C%20Karnataka%20583239!5e0!3m2!1sen!2sin!4v1692940851519!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+    <br>
+    <a href="hampi.html">
+     <button action="hampi.html"> HAMPI</button>
+  </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15347.078449274562!2d75.66876403610718!3d15.921136289479376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb887066f877b11%3A0x32471143677d16e4!2sBadami%2C%20Karnataka%20587201!5e0!3m2!1sen!2sin!4v1692941042516!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="badami.html">
+     <button action="badami.html"> BADAMI</button>
+   </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.2255682998666!2d75.81255741033006!3d15.949592542566522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb87bf19b392b55%3A0xfdb1681ecf44f6de!2sPattadakal%2C%20Karnataka%20587201!5e0!3m2!1sen!2sin!4v1692942562668!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="pattadakal.html">
+     <button action="pattadakal.html"> PATTADAKAL</button>
+   </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15339.5069291184!2d75.87256898613671!3d16.019931127938882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb87833f175cd0b%3A0x84f5e58872728b33!2sAihole%2C%20Karnataka%20587124!5e0!3m2!1sen!2sin!4v1692942662771!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="aihole.html">
+     <button action="aihole.html">AIHOLE</button>
+   </p>
+  <p class="secondRow"  style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7768.389057421812!2d75.98816861127972!3d13.213100343130343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbacb89e4b932ed%3A0xc477034b6a8fb20d!2sHalebeedu%2C%20Karnataka%20573121!5e0!3m2!1sen!2sin!4v1692942704546!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="halebeedu.html">
+     <button action="halebeedu.html" >HALEBEEDU</button>
+   </p >
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.1576488923115!2d76.6525946102717!3d12.305168229089281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf701103f9a1f9%3A0xc37fbae2a124da0d!2sMysore%20Palace!5e0!3m2!1sen!2sin!4v1692942733796!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="mysorepalace.html">
+     <button action="mysorepalace.html"> MYSORE PALACE</button>
+   </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31172.295852180014!2d76.67322117119132!3d12.413900231898682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf76fb1e7a313b%3A0xd30348df5a9ea201!2sSrirangapatna%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1692942769028!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+    <br>
+    <a href="srirangapatna.html">
+     <button action="srirangapatna.html"> SRIRANGAPATNA</button> </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61102.86356849737!2d75.6762517136072!3d16.829879334575537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc6557d98aa706f%3A0xedd4a1794e8fe8d2!2sVijayapura%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1692942799502!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="vijayapura.html">
+     <button action="vijayapura.html"> VIJAYAPURA</button>
+   </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60744.06958532902!2d77.4532614693913!3d17.90861537202007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcec722d6908ce5%3A0xb9a71b6e00adff6c!2sBidar%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1692942822165!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <a href="bidar.html">
+     <button action="bidar.html"> BIDAR</button>
+   </p>
+  <p class="secondRow" style="border-width: 5px; border: solid;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121872.33548368367!2d76.75736632670692!3d17.339152142651855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8c7455b824e57%3A0x44cbe3366957ed9f!2sKalaburagi%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1692942850065!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a href="kalaburgi.html">
+     <button action="kalaburgi.html"> KALABURGI</button>
+   </p>
+ 
+   <footer>
+    <div class="contact">
+      <p>
+       <u><i>contact number</i></u> <br>
+        rushila:
+        9538501947<br>
+        sanjana:
+        7795187642<br>
+        sanvi:
+        9008258900<br>
+      </p>
+    </div>
+   </footer>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
